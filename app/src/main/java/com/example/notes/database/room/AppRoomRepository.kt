@@ -1,8 +1,10 @@
 package com.example.notes.database.room
 
 import androidx.lifecycle.LiveData
+import com.example.notes.R
 import com.example.notes.database.DataBaseRepository
 import com.example.notes.model.AppNote
+import com.example.notes.utilits.APP_ACTIVITY
 
 class AppRoomRepository(private val appRoomDao: AppRoomDao): DataBaseRepository {
     override val allNotes: LiveData<List<AppNote>>
@@ -17,4 +19,9 @@ class AppRoomRepository(private val appRoomDao: AppRoomDao): DataBaseRepository 
         appRoomDao.delete(note)
         onSuccess()
     }
+
+    override fun signOut() {
+        super.signOut()
+    }
+
 }

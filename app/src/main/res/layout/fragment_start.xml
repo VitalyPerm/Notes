@@ -29,6 +29,56 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
 
+    <Button
+        android:id="@+id/btn_firebase"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_start_firebase"
+        app:layout_constraintTop_toBottomOf="@id/btn_room"
+        android:layout_margin="@dimen/app_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/input_email"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_firebase"
+        android:layout_margin="@dimen/app_margin"
+        android:hint="@string/email_hint"
+        android:inputType="textEmailAddress"
+        android:visibility="gone"
+        />
+    <EditText
+        android:id="@+id/input_password"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_email"
+        android:layout_margin="@dimen/app_margin"
+        android:hint="@string/enter_password_hint"
+        android:inputType="textPassword"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_login_start"
+        app:layout_constraintTop_toBottomOf="@id/input_password"
+        android:layout_margin="@dimen/app_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        />
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

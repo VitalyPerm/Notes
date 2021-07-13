@@ -7,4 +7,9 @@
     <string name="start_btn_room">ROOM</string>
     <string name="title">Заметки</string>
     <string name="toast_enter_name">Имя не может быть пустым</string>
+    <string name="btn_start_firebase">firebase</string>
+    <string name="email_hint">Enter EMAIL</string>
+    <string name="enter_password_hint">enter password</string>
+    <string name="btn_login_start">Login</string>
+    <string name="toast_wrong_enter">Введите email и пароль</string>
 </resources>
