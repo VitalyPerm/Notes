@@ -9,18 +9,29 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.notes.R
 import com.example.notes.model.AppNote
 
-class MainAdapter:RecyclerView.Adapter<MainAdapter.MainHolder>() {
+class MainAdapter : RecyclerView.Adapter<MainAdapter.MainHolder>() {
 
     private var mListNotes = emptyList<AppNote>()
 
 
-    class MainHolder(view: View):RecyclerView.ViewHolder(view){
-        val nameNote:TextView = view.findViewById(R.id.item_note_name)
-        val textNote:TextView = view.findViewById(R.id.item_note_text)
+    class MainHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val nameNote: TextView = view.findViewById(R.id.item_note_name)
+        val textNote: TextView = view.findViewById(R.id.item_note_text)
+    }
+
+    override fun onViewAttachedToWindow(holder: MainHolder) {
+        holder.itemView.setOnClickListener {
+            MainFragment.click(mListNotes[holder.adapterPosition])
+        }
+    }
+
+    override fun onViewDetachedFromWindow(holder: MainHolder) {
+        super.onViewDetachedFromWindow(holder)
+        holder.itemView.setOnClickListener(null)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainHolder {
-       val view = LayoutInflater.from(parent.context).inflate(R.layout.note_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.note_item, parent, false)
         return MainHolder(view)
     }
 
@@ -31,7 +42,7 @@ class MainAdapter:RecyclerView.Adapter<MainAdapter.MainHolder>() {
 
     override fun getItemCount(): Int = mListNotes.size
 
-    fun setList(list:List<AppNote>){
+    fun setList(list: List<AppNote>) {
         mListNotes = list
         notifyDataSetChanged()
     }
