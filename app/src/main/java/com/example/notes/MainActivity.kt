@@ -27,8 +27,6 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(mToolbar)
         title = getString(R.string.title)
         AppPreference.getPreference(this)
-
-
     }
 
     override fun onDestroy() {

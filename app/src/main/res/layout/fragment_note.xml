@@ -4,12 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/glaze"
     tools:context=".screens.note.NoteFragment">
 
     <TextView
         android:id="@+id/note_name"
         tools:text="Name note"
-        android:textColor="@color/design_default_color_primary_dark"
+        android:textColor="@color/cocoa"
         android:textStyle="bold"
         android:textSize="@dimen/app_large_text"
         android:gravity="center"
@@ -29,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="@dimen/app_margin"
         tools:text="note text"
-        android:textColor="@color/design_default_color_primary"
+        android:textColor="@color/cocoa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
